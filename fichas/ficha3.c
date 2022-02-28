@@ -55,6 +55,17 @@ int maximumOrd(int v[], int N, int *m)
  return 0;
 } // O(1)
 
+void quadrados (int q[], int N)
+{
+ // for (int i = 0; i < N; i++) v[i] = v[i]*v[i]; // not using the formulae
+ int i = 0;
+ while (i < N)
+ {
+  q[i++] = q[i]*q[i] + (2*q[i]+1);
+ }
+}
+
+
 void a_dump(int array[], int N)
 {
  for (int i = 0; i < N; i++) printf("%d ", array[i]);
@@ -65,6 +76,7 @@ void a_dump(int array[], int N)
 main()
 {
  int v1[5] = {1,2,4,3,5};
+ int q[5] = {0,1,2,3,4};
  int m;
  // exercise 2
  //int x = 3, y = 5;
@@ -84,5 +96,7 @@ main()
  maximum(v1, sizeof(v1)/sizeof(v1[0]), &m);
  //maximumOrd only works in sorted arrays
  printf("%i\n", m);
+ quadrados(q, 5);
+ a_dump(q,5);
  return 0;
 } 
