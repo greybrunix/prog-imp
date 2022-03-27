@@ -91,6 +91,8 @@ int mystrcmp(char s1[], char s2[])
  }
  return *s1 - *s2;
 }
+
+
 main(){
     // memory allocation
     char * s1 = malloc(1024 * sizeof(char));
